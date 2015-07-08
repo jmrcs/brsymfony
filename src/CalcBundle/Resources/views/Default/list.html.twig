@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {{ dump(operations) }}
+
+    <ul>
+        {% for operation in operations %}
+            <li>{{ operation.action }} :: params = {{ operation.firstOperator}}, {{ operation.lastOperator}} = {{ operation.result}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

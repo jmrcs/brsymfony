@@ -1,0 +1,9 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+calc:
+    resource: "@CalcBundle/Resources/config/routing.yml"
+    prefix:    /
+movie:
+    resource: "@MovieBundle/Resources/config/routing.yml"
+    prefix:    /

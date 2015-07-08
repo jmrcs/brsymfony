@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <ul>
+        <li><a href="{{ path('movie_list') }}" target="_self">List Movies</a></li>
+        <li><a href="{{ path('person_list') }}" target="_self">List Persons</a></li>
+        <li><a href="{{ path('producer_list') }}" target="_self">List Producers</a></li>
+    </ul>
+{% endblock %}

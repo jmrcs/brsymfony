@@ -1,0 +1,21 @@
+movie_homepage:
+    path:    /
+    defaults:    {_controller: MovieBundle:Default:index}
+movie_list:
+    path:    /list/movies
+    defaults:    {_controller: MovieBundle:Default:listMovies}
+movie_create:
+    path:    /create/movie
+    defaults:    {_controller: MovieBundle:Default:createMovies}
+movie_edit:
+    path:    /edit/movies/{id}
+    defaults:    {_controller: MovieBundle:Default:editMovies}
+movie_delete:
+    path:    /delete/movies/{id}
+    defaults:    {_controller: MovieBundle:Default:deleteMovies}
+person_list:
+    path:    /list/persons
+    defaults:    {_controller: MovieBundle:Default:listPersons}
+producer_list:
+    path:    /list/producers
+    defaults:    {_controller: MovieBundle:Default:listProducers}

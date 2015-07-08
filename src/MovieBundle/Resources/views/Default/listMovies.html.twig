@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <ul>
+        <li>
+        </li>
+    </ul>
+    <table border="1" style="padding: 5px;">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Title</b></td>
+            <td><b>Description</b></td>
+            <td><b>IMDB Link</b></td>
+            <td><b>Youtube Link</b></td>
+            <td><b>RATING</b></td>
+            <td><b>Director</b></td>
+            <td><b>Producer</b></td>
+            <td><b>Actors</b></td>
+            <td colspan="2" style="text-align: center;"><b>Actions</b></td>
+        </tr>
+    {% for movie in allMovies %}
+        <tr>
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.title }}</td>
+            <td style="width: 400px;">{{ movie.description }}</td>
+            <td><a href="{{ movie.imdbLink }}" target="_blank">{{ movie.imdbLink }}</a></td>
+            <td><a href="{{ movie.youtubeLink }}" target="_blank">{{ movie.youtubeLink }}</a></td>
+            <td>{{ movie.rating }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.producer }}</td>
+            <td></td>
+            <td><a href="{{ path('movie_edit', {'id': movie.id}) }}" target="_self">Edit Movie</a></td>
+            <td><a href="{{ path('movie_delete',{'id': movie.id}) }}" target="_self">Delete Movie</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <ul>
+        <li><a href="{{ path('movie_create') }}" target="_self">Create Movie</a></li>
+        <li><a href="javascript:history.back();" target="_self">Back</a></li>
+    </ul>
+{% endblock %}

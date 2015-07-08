@@ -1,0 +1,17 @@
+MovieBundle\Entity\Producer:
+  type: entity
+  table: producer
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 255
+      column: name
+  oneToMany:
+    movies:
+      targetEntity: Movie
+      mappedBy: actors

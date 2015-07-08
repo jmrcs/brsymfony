@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.firstOperator) }}
+    {{ form_row(form.action) }}
+    {{ form_row(form.lastOperator) }}
+    {{ form_row(form.result) }}
+    {{ form_row(form.send) }}
+{{ form_end(form) }}
+{% endblock %}

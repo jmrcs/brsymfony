@@ -1,0 +1,9 @@
+services:
+    Calculator:
+        class: CalcBundle\Services\Calculator
+        arguments:
+            - @doctrine.orm.default_entity_manager
+    ListOperations:
+        class: CalcBundle\Services\ListOperations
+        arguments:
+            - @doctrine.orm.default_entity_manager

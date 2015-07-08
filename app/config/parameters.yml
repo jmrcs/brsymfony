@@ -1,0 +1,1 @@
+{ parameters: { database_host: 127.0.0.1, database_port: null, database_name: brsymfonDBlxlor, database_user: brsymfonDBlxlor, database_password: zlI74PGBYM, mailer_transport: smtp, mailer_host: 127.0.0.1, mailer_user: null, mailer_password: null, secret: 06646a7d6c3e29f311e6f7d87b3407a9982420ae, database_driver: pdo_mysql, database_path: null } }

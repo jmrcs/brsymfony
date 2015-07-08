@@ -1,0 +1,11 @@
+calc_homepage:
+    path:    /calc/{x}/{operation}/{y}
+    defaults:    {_controller: CalcBundle:Default:index}
+    requirements:
+        _method:  GET
+calc_list:
+    path:    /calc/list
+    defaults:    {_controller: CalcBundle:Default:list}
+calc_form:
+    path:    /calc/do
+    defaults:    {_controller: CalcBundle:Default:do}

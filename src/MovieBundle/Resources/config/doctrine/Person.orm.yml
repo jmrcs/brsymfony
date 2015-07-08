@@ -1,0 +1,21 @@
+MovieBundle\Entity\Person:
+  type: entity
+  table: person
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 255
+      column: name
+  manyToMany:
+    movies:
+      targetEntity: Movie
+      mappedBy: actors
+  oneToMany:
+    moviesDirected:
+      targetEntity: Movie
+      mappedBy: director

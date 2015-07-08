@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {{ dump(allPersons) }}
+
+    <ul>
+        <li><a href="javascript:history.back();" target="_self">Back</a></li>
+    </ul>
+{% endblock %}

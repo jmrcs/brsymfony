@@ -1,0 +1,21 @@
+CalcBundle\Entity\Operation:
+    type: entity
+    table: operation
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        firstOperator:
+            column: firstOperator
+            type: float
+        lastOperator:
+            column: lastOperator
+            type: float
+        action:
+            column: action
+            type: string
+        result:
+            column: result
+            type: float
