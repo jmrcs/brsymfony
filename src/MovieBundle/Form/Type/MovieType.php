@@ -11,7 +11,6 @@ namespace MovieBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use MovieBundle\Entity\Operation;
 
 /**
  * Class MovieType
@@ -58,20 +57,33 @@ class MovieType extends AbstractType
                 'required' => true,
                 'label'    => 'Rating',
             ])
-            ->add('director', 'text', [
+            ->add('director', 'entity', array(
+                'class' => 'MovieBundle:Person',
+                'property' => 'name',
                 'required' => false,
                 'label'    => 'Director',
-            ])
-            ->add('producer', 'text', [
+                'expanded' => false,
+                'multiple' => false,
+            ))
+            ->add('producer', 'entity', array(
+                'class' => 'MovieBundle:Producer',
+                'property' => 'name',
                 'required' => false,
                 'label'    => 'Producer',
-            ])
-            ->add('actors', 'text', [
+                'expanded' => false,
+                'multiple' => false,
+            ))
+            ->add('actors', 'entity', array(
+                'class' => 'MovieBundle:Person',
+                'property' => 'name',
                 'required' => false,
                 'label'    => 'Actors',
-            ])
+                'expanded' => false,
+                'multiple' => true,
+            ))
             ->add('send', 'submit');
     }
+
     /**
      * Return unique name for this form
      *

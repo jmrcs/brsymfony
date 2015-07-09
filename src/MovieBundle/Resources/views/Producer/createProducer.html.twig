@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.send) }}
+    {{ form_end(form) }}
+
+    <ul>
+        <li><a href="{{ path('producer_list') }}" target="_self">List Producers</a></li>
+        <li><a href="{{ path('default_homepage') }}" target="_self">Home</a></li>
+    </ul>
+{% endblock %}

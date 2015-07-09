@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {#
+    {% if app.request.get('msg') is defined  %}
+        <ul>
+            <li>
+                <b>The movie with ID {{ app.request.get('msg') }} was deleted</b>
+            </li>
+        </ul>
+    {% endif %}
+    #}
+    <ul>
+        <li>
+            This movie has the id {{ movie.id }}
+        </li>
+        <li>
+            The title is {{ movie.title }}
+        </li>
+        <li>
+            Directed by {{ movie.director.name }}
+        </li>
+        <li>
+            Produced by {{ movie.producer.name }}
+        </li>
+        <li>
+            <iframe width="560" height="315" src="{{ movie.youtubeLink }}" frameborder="0" allowfullscreen></iframe>
+        </li>
+    </ul>
+    <ul>
+        <li><a href="{{ path('movie_list') }}" target="_self">List Movies</a></li>
+    </ul>
+{% endblock %}

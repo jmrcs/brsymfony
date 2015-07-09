@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <table border="1" style="padding: 5px;">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Name</b></td>
+            <td colspan="2" style="text-align: center;"><b>Actions</b></td>
+        </tr>
+        {% for producer in allProducers %}
+            <tr>
+                <td>{{ producer.id }}</td>
+                <td>{{ producer.name }}</td>
+                <td><a href="{{ path('producer_edit', {'id': producer.id}) }}" target="_self">Edit</a></td>
+                <td><a href="{{ path('producer_delete',{'id': producer.id}) }}" target="_self">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <ul>
+        <li><a href="{{ path('producer_create') }}" target="_self">Create producer</a></li>
+        <li><a href="{{ path('default_homepage') }}" target="_self">Home</a></li>
+    </ul>
+{% endblock %}

@@ -1,13 +1,13 @@
 services:
-    Movie:
-        class: MovieBundle\Services\Movie
+    movies_service:
+        class: MovieBundle\Services\MoviesService
         arguments:
             - @doctrine.orm.default_entity_manager
-    ListMovies:
-        class: MovieBundle\Services\ListMovies
+    persons_service:
+        class: MovieBundle\Services\PersonsService
         arguments:
             - @doctrine.orm.default_entity_manager
-    CreateMovies:
-        class: MovieBundle\Services\CreateMovies
+    producers_service:
+        class: MovieBundle\Services\ProducersService
         arguments:
             - @doctrine.orm.default_entity_manager

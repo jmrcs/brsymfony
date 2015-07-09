@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <table border="1" style="padding: 5px;">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Name</b></td>
+            <td colspan="3" style="text-align: center;"><b>Actions</b></td>
+        </tr>
+        {% for person in allPersons %}
+            <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.name }}</td>
+                <td><a href="{{ path('person_edit', {'id': person.id}) }}" target="_self">Edit</a></td>
+                <td><a href="{{ path('person_delete',{'id': person.id}) }}" target="_self">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <ul>
+        <li><a href="{{ path('person_create') }}" target="_self">Create person</a></li>
+        <li><a href="{{ path('default_homepage') }}" target="_self">Home</a></li>
+    </ul>
+{% endblock %}
