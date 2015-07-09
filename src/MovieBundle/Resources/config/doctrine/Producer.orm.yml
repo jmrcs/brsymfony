@@ -13,5 +13,5 @@ MovieBundle\Entity\Producer:
       column: name
   oneToMany:
     movies:
-      targetEntity: Movie
-      mappedBy: actors
+      targetEntity: MovieBundle\Entity\Movie
+      mappedBy: producer

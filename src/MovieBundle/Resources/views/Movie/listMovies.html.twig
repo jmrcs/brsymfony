@@ -32,7 +32,11 @@
             <td>{{ movie.rating }}</td>
             <td>{{ movie.director.name }}</td>
             <td>{{ movie.producer.name }}</td>
-            <td>{# movie.actors.name #}</td>
+            <td>
+                {% for actors in movie.actors %}
+                    {{ actors.name }},
+                {% endfor %}
+            </td>
             <td><a href="{{ path('movie_edit', {'id': movie.id}) }}" target="_self">Edit</a></td>
             <td><a href="{{ path('movie_delete',{'id': movie.id}) }}" target="_self">Delete</a></td>
             <td><a href="{{ path('movie_view',{'id': movie.id}) }}" target="_self">View</a></td>

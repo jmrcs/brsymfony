@@ -28,24 +28,26 @@ MovieBundle\Entity\Movie:
       column: rating
   manyToOne:
     producer:
-      targetEntity: Producer
+      targetEntity: MovieBundle\Entity\Producer
       joinColumn:
         name: producer_id
         referencedColumnName: id
+      inversedBy: movies
     director:
-      targetEntity: Person
+      targetEntity: MovieBundle\Entity\Person
       joinColumn:
         name: director_id
         referencedColumnName: id
+      inversedBy: moviesDirected
   manyToMany:
     actors:
-      targetEntity: Person
+      targetEntity: MovieBundle\Entity\Person
       inversedBy: movies
       joinTable:
-        name: persons_movies
+        name: movie_person
         joinColumns:
-          person_id:
+          movie_id:
             referencedColumnName: id
         inverseJoinColumns:
-          movie_id:
+          person_id:
             referencedColumnName: id

@@ -13,9 +13,9 @@ MovieBundle\Entity\Person:
       column: name
   manyToMany:
     movies:
-      targetEntity: Movie
+      targetEntity: MovieBundle\Entity\Movie
       mappedBy: actors
   oneToMany:
     moviesDirected:
-      targetEntity: Movie
+      targetEntity: MovieBundle\Entity\Movie
       mappedBy: director
