@@ -145,4 +145,8 @@ class Movie {
     {
         $this->director = $director;
     }
+
+    public function __toString(){
+        return $this->getTitle()." ".$this->getDirector()->getName();
+    }
 }
